@@ -2,7 +2,6 @@ package com.humber.parenthood;
 
 import androidx.appcompat.app.AppCompatActivity;
 import android.os.Bundle;
-import android.view.View;
 import android.widget.Button;
 
 public class MainActivity extends AppCompatActivity {
@@ -20,19 +19,14 @@ public class MainActivity extends AppCompatActivity {
         btnChat = findViewById(R.id.chat);
         btnSettings = findViewById(R.id.settings);
 
-        IngrediantPicker ingrediantPicker = new IngrediantPicker();
+        IngredientPicker ingredientPicker = new IngredientPicker();
 
         getSupportFragmentManager().beginTransaction()
-                .replace(R.id.fragementScreen, ingrediantPicker)
+                .replace(R.id.fragementScreen, ingredientPicker)
                 .commit();
 
-        btnEat.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View view) {
-                getSupportFragmentManager().beginTransaction()
-                        .replace(R.id.fragementScreen, ingrediantPicker)
-                        .commit();
-            }
-        });
+        btnEat.setOnClickListener(view -> getSupportFragmentManager().beginTransaction()
+                .replace(R.id.fragementScreen, ingredientPicker)
+                .commit());
     }
 }

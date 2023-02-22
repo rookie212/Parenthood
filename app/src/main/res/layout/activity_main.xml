@@ -16,7 +16,7 @@
         />
 
     <FrameLayout
-        android:id="@+id/fragementScreen"
+        android:id="@+id/fragmentScreen"
         android:layout_width="match_parent"
         android:layout_height="0dp"
         app:layout_constraintStart_toStartOf="parent"
@@ -31,7 +31,6 @@
         android:layout_width="match_parent"
         android:layout_height="0dp"
         app:layout_constraintBottom_toBottomOf="parent"
-
         app:layout_constraintTop_toBottomOf="@+id/nav_bar_gl">
 
         <Button
@@ -40,7 +39,6 @@
             android:layout_height="wrap_content"
             android:layout_marginHorizontal="5dp"
             android:text="Eat"
-
             app:layout_constraintEnd_toStartOf="@+id/groceries"
             app:layout_constraintBottom_toBottomOf="parent"
             app:layout_constraintStart_toStartOf="parent"
@@ -51,8 +49,7 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_marginHorizontal="5dp"
-            android:text="Groc"
-
+            android:text="Grocery"
             app:layout_constraintEnd_toStartOf="@+id/chat"
             app:layout_constraintBottom_toBottomOf="parent"
             app:layout_constraintStart_toEndOf="@+id/eat"
@@ -64,7 +61,6 @@
             android:layout_height="wrap_content"
             android:layout_marginHorizontal="5dp"
             android:text="Chat"
-
             app:layout_constraintBottom_toBottomOf="parent"
             app:layout_constraintEnd_toStartOf="@+id/settings"
             app:layout_constraintStart_toEndOf="@+id/groceries"
@@ -77,16 +73,9 @@
             android:layout_height="wrap_content"
             android:layout_marginHorizontal="5dp"
             android:text="Settings"
-
             app:layout_constraintBottom_toBottomOf="parent"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintStart_toEndOf="@+id/chat"
             app:layout_constraintTop_toTopOf="@+id/nav_bar" />
-
-
     </androidx.constraintlayout.widget.ConstraintLayout>
 </androidx.constraintlayout.widget.ConstraintLayout>
-
-
-
-

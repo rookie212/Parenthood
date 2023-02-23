@@ -1,38 +1,53 @@
 package com.humber.parenthood;
 
 import androidx.appcompat.app.AppCompatActivity;
+import androidx.fragment.app.Fragment;
+import androidx.fragment.app.FragmentManager;
+import androidx.fragment.app.FragmentTransaction;
+import androidx.navigation.NavController;
+import androidx.navigation.Navigation;
+import androidx.navigation.ui.AppBarConfiguration;
+import androidx.navigation.ui.NavigationUI;
+
+import android.annotation.SuppressLint;
 import android.os.Bundle;
 import android.view.View;
 import android.widget.Button;
 
+import com.google.android.material.bottomnavigation.BottomNavigationView;
+import com.humber.parenthood.databinding.ActivityMainBinding;
+
 public class MainActivity extends AppCompatActivity {
-
-    Button btnEat, btnGroceries, btnChat, btnSettings;
-
+    ActivityMainBinding binding;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_main);
+        binding = ActivityMainBinding.inflate(getLayoutInflater());
+        setContentView(binding.getRoot());
+        //replaceFragement(new IngredientPicker());
 
-        btnEat = findViewById(R.id.eat);
-        btnGroceries = findViewById(R.id.groceries);
-        btnChat = findViewById(R.id.chat);
-        btnSettings = findViewById(R.id.settings);
-
-        IngrediantPicker ingrediantPicker = new IngrediantPicker();
-
-        getSupportFragmentManager().beginTransaction()
-                .replace(R.id.fragementScreen, ingrediantPicker)
-                .commit();
-
-        btnEat.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View view) {
-                getSupportFragmentManager().beginTransaction()
-                        .replace(R.id.fragementScreen, ingrediantPicker)
-                        .commit();
+        binding.bottomNavigationView.setOnItemSelectedListener(item -> {
+            switch(item.getItemId()){
+                case R.id.eat_options:
+                    replaceFragement(new IngredientPicker());
+                    break;
+                case R.id.groceries:
+                    break;
+                case R.id.chat:
+                    break;
+                case R.id.setting:
+                    break;
             }
+            return true;
         });
+    }
+
+    private void replaceFragement(Fragment fragment) {
+        FragmentManager fragmentManager = getSupportFragmentManager();
+        FragmentTransaction fragmentTransaction = fragmentManager.beginTransaction();
+        fragmentTransaction.replace(R.id.fragmentScreen, fragment);
+        fragmentTransaction.commit();
+
     }
 }

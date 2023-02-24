@@ -9,7 +9,6 @@ import androidx.annotation.NonNull;
 import androidx.annotation.Nullable;
 import androidx.fragment.app.Fragment;
 import androidx.recyclerview.widget.GridLayoutManager;
-import androidx.recyclerview.widget.LinearLayoutManager;
 import androidx.recyclerview.widget.RecyclerView;
 
 import com.humber.parenthood.R;
@@ -49,7 +48,6 @@ public class IngredientPicker extends Fragment {
         modelArrayList.add(new ItemModel("apple"));
         modelArrayList.add(new ItemModel("pear"));
         modelArrayList.add(new ItemModel("dragon"));
-
 
         recyclerView.setLayoutManager(new GridLayoutManager (view.getContext(), 4));
         adapter = new ItemAdaptor(modelArrayList, view.getContext());

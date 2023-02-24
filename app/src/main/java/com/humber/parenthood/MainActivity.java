@@ -18,26 +18,25 @@ public class MainActivity extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         binding = ActivityMainBinding.inflate(getLayoutInflater());
         setContentView(binding.getRoot());
-        //replaceFragement(new IngredientPicker());
 
         binding.bottomNavigationView.setOnItemSelectedListener(item -> {
             switch(item.getItemId()){
                 case R.id.eat_options:
-                    replaceFragement(new IngredientPicker());
+                    replaceFragment(new IngredientPicker());
                     break;
                 case R.id.groceries:
                     break;
                 case R.id.chat:
                     break;
                 case R.id.setting:
-                    replaceFragement(new SettingsFragment());
+                    replaceFragment(new SettingsFragment());
                     break;
             }
             return true;
         });
     }
 
-    private void replaceFragement(Fragment fragment) {
+    private void replaceFragment(Fragment fragment) {
         FragmentManager fragmentManager = getSupportFragmentManager();
         FragmentTransaction fragmentTransaction = fragmentManager.beginTransaction();
         fragmentTransaction.replace(R.id.fragmentScreen, fragment);

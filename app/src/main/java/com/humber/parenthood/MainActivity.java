@@ -36,6 +36,7 @@ public class MainActivity extends AppCompatActivity {
                 case R.id.chat:
                     break;
                 case R.id.setting:
+                    replaceFragement(new SettingsFragment());
                     break;
             }
             return true;
@@ -47,6 +48,5 @@ public class MainActivity extends AppCompatActivity {
         FragmentTransaction fragmentTransaction = fragmentManager.beginTransaction();
         fragmentTransaction.replace(R.id.fragmentScreen, fragment);
         fragmentTransaction.commit();
-
     }
 }

@@ -4,7 +4,7 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     xmlns:app="http://schemas.android.com/apk/res-auto"
-    tools:context=".IngredientPicker"
+    tools:context=".eat_in_layout.IngredientPicker"
     >
 
     <androidx.constraintlayout.widget.ConstraintLayout
@@ -22,10 +22,11 @@
 
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toTopOf="parent"
-            app:queryHint="Search Notes..." />
+            app:queryHint="Search For Items" />
 
 
         <androidx.recyclerview.widget.RecyclerView
+            android:id="@+id/itemsRV"
             android:layout_width="match_parent"
             android:layout_height="0dp"
             android:layout_margin="8dp"

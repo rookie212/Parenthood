@@ -29,10 +29,8 @@
                 android:layout_height="wrap_content"
                 android:scaleType="fitXY"
                 android:src="@mipmap/ic_launcher"
+                />
 
-                >
-
-            </ImageView>
         </androidx.cardview.widget.CardView>
 
         <androidx.cardview.widget.CardView
@@ -50,12 +48,19 @@
                 android:src="@mipmap/ic_launcher_round"
                 android:padding="10dp"
                 android:layout_margin="10dp"
-                />
-
-
+                >
+            </ImageView>
         </androidx.cardview.widget.CardView>
-
-
+        <TextView
+            android:id="@+id/item_name"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="item_name"
+            android:textStyle="bold"
+            android:layout_gravity="center|bottom"
+            android:layout_marginBottom="5dp"
+            android:elevation="100dp"
+            />
     </androidx.cardview.widget.CardView>
 
 </androidx.constraintlayout.widget.ConstraintLayout>

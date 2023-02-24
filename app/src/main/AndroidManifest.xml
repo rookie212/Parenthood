@@ -16,12 +16,16 @@
         <activity
             android:name=".FirebaseSignInActivity"
             android:label="Firebase Sign In"
-            android:exported="false" >
-<!--            <intent-filter>
+            android:exported="true" >
+            <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
                 <category android:name="android.intent.category.LAUNCHER" />
-            </intent-filter>-->
+            </intent-filter>
         </activity>
+
+
+
+        //sssss
 
 
         <activity
@@ -29,10 +33,10 @@
             android:label="Home"
             android:exported="true"
             android:windowSoftInputMode="adjustPan">
-            <intent-filter>
+<!--            <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
                 <category android:name="android.intent.category.LAUNCHER" />
-            </intent-filter>
+            </intent-filter>-->
         </activity>
     </application>
 

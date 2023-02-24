@@ -24,14 +24,10 @@
         </activity>
 
 
-
-        //sssss
-
-
         <activity
             android:name=".MainActivity"
             android:label="Home"
-            android:exported="true"
+            android:exported="false"
             android:windowSoftInputMode="adjustPan">
 <!--            <intent-filter>
                 <action android:name="android.intent.action.MAIN" />

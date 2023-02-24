@@ -34,12 +34,25 @@ public class IngredientPicker extends Fragment {
         recyclerView = view.findViewById(R.id.itemsRV);
 
         modelArrayList.add(new ItemModel("potato"));
+        modelArrayList.add(new ItemModel("apple"));
+        modelArrayList.add(new ItemModel("pear"));
+        modelArrayList.add(new ItemModel("dragon"));
+        modelArrayList.add(new ItemModel("potato"));
+        modelArrayList.add(new ItemModel("apple"));
+        modelArrayList.add(new ItemModel("pear"));
+        modelArrayList.add(new ItemModel("dragon"));
+        modelArrayList.add(new ItemModel("potato"));
+        modelArrayList.add(new ItemModel("apple"));
+        modelArrayList.add(new ItemModel("pear"));
+        modelArrayList.add(new ItemModel("dragon"));
+        modelArrayList.add(new ItemModel("potato"));
+        modelArrayList.add(new ItemModel("apple"));
+        modelArrayList.add(new ItemModel("pear"));
+        modelArrayList.add(new ItemModel("dragon"));
 
 
-        //recyclerView.setLayoutManager(new GridLayoutManager (4, LinearLayoutManager.VERTICAL));
-        //adapter = new ItemAdaptor(modelArrayList);
+        recyclerView.setLayoutManager(new GridLayoutManager (view.getContext(), 4));
+        adapter = new ItemAdaptor(modelArrayList, view.getContext());
         recyclerView.setAdapter(adapter);
-
-
     }
 }

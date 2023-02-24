@@ -34,7 +34,6 @@ public class ItemAdaptor extends RecyclerView.Adapter <ItemAdaptor.ViewHolder>{
     @Override
     public void onBindViewHolder(@NonNull ItemAdaptor.ViewHolder holder, int position) {
         ItemModel model = modelArrayList.get(position);
-        //holder.profileLetter.setText(model.getProfileLetter().toString());
         holder.name.setText(model.getName());
     }
 
@@ -44,7 +43,6 @@ public class ItemAdaptor extends RecyclerView.Adapter <ItemAdaptor.ViewHolder>{
     }
 
     public class ViewHolder extends RecyclerView.ViewHolder {
-        // initialize profileLetter,name,number
         TextView name;
         public ViewHolder(@NonNull View itemView) {
             super(itemView);

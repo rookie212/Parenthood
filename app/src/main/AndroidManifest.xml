@@ -24,6 +24,10 @@
         </activity>
 
 
+
+        //sssss
+
+
         <activity
             android:name=".MainActivity"
             android:label="Home"

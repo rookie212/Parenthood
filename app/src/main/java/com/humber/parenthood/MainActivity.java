@@ -36,18 +36,19 @@ public class MainActivity extends AppCompatActivity {
 
         fragmentManager = getSupportFragmentManager();
         FragmentTransaction fragmentTransaction = fragmentManager.beginTransaction();
-        fragmentTransaction.add(binding.container.getId(), settingsFragment).hide(settingsFragment);
-        fragmentTransaction.add(binding.container.getId(), groceryFragment).hide(groceryFragment);
-        fragmentTransaction.add(binding.container.getId(), eatInOutFragment).hide(eatInOutFragment);
-        fragmentTransaction.add(binding.container.getId(), ingredientPicker).hide(ingredientPicker);
-        fragmentTransaction.add(binding.container.getId(), chatFragment);
+        fragmentTransaction.add(binding.fragmentScreen.getId(), settingsFragment).hide(settingsFragment);
+        fragmentTransaction.add(binding.fragmentScreen.getId(), groceryFragment).hide(groceryFragment);
+        fragmentTransaction.add(binding.fragmentScreen.getId(), eatInOutFragment).hide(eatInOutFragment);
+        fragmentTransaction.add(binding.fragmentScreen.getId(), ingredientPicker).hide(ingredientPicker);
+        fragmentTransaction.add(binding.fragmentScreen.getId(), chatFragment);
         fragmentTransaction.commitNow();
         active = chatFragment;
         getSupportActionBar().setTitle("Chat");
 
-        binding.btm.setOnItemSelectedListener(item -> {
+        binding.bottomNavigationView.setOnItemSelectedListener(item -> {
             int itemId = item.getItemId();
             if (itemId == R.id.chat) {
+
                 changeFragment(chatFragment);
                 getSupportActionBar().setTitle("Chat");
             } else if (itemId == R.id.groceries) {
@@ -65,10 +66,32 @@ public class MainActivity extends AppCompatActivity {
             }
             return true;
         });
+//        binding.bottomNavigationView.setOnItemSelectedListener(item -> {
+//            switch(item.getItemId()){
+//                case R.id.eat_options:
+//                    replaceFragment(new IngredientPicker());
+//                    break;
+//                case R.id.groceries:
+//                    break;
+//                case R.id.chat:
+//                    break;
+//                case R.id.settings:
+//                    replaceFragment(new SettingsFragment());
+//                    break;
+//            }
+//            return true;
+//        });
     }
 
     private void changeFragment(Fragment fragment){
         fragmentManager.beginTransaction().hide(active).show(fragment).commit();
         active = fragment;
     }
+
+//    private void replaceFragment(Fragment fragment) {
+//        FragmentManager fragmentManager = getSupportFragmentManager();
+//        FragmentTransaction fragmentTransaction = fragmentManager.beginTransaction();
+//        fragmentTransaction.replace(R.id.fragmentScreen, fragment);
+//        fragmentTransaction.commit();
+//    }
 }

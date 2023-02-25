@@ -6,21 +6,22 @@
         android:id="@+id/eat_options"
         android:icon="@drawable/ic_dashboard_black_24dp"
         android:title="@string/title_eat_options"/>
-
     <item
         android:id="@+id/groceries"
-        android:icon="@drawable/ic_dashboard_black_24dp"
-        android:title="@string/title_groceries"/>
-
+        android:icon="@drawable/round_format_list_bulleted_24"
+        android:title="@string/title_groceries" />
     <item
         android:id="@+id/chat"
-        android:icon="@drawable/ic_dashboard_black_24dp"
-        android:title="@string/title_chat"/>
-
+        android:icon="@drawable/ic_message"
+        android:title="@string/title_chat" />
     <item
-        android:id="@+id/setting"
-        android:icon="@drawable/ic_home_black_24dp"
-        android:title="@string/title_settings"/>
+        android:id="@+id/eat"
+        android:icon="@drawable/baseline_fastfood_24"
+        android:title="@string/eat_in_out" />
+    <item
+        android:id="@+id/settings"
+        android:icon="@drawable/ic_setting_bold"
+        android:title="@string/title_settings" />
 
 <!--
     <item

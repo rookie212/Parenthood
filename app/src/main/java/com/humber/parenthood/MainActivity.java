@@ -12,6 +12,11 @@ import android.view.MenuItem;
 import com.google.android.material.navigation.NavigationBarView;
 import com.humber.parenthood.Fragments.*;
 import com.humber.parenthood.databinding.ActivityMainBinding;
+import com.humber.parenthood.databinding.ActivityMainBinding;
+import com.humber.parenthood.eat_in_layout.IngredientPicker;
+
+public class MainActivity extends AppCompatActivity {
+    ActivityMainBinding binding;
 
 
 public class MainActivity extends AppCompatActivity {
@@ -74,5 +79,33 @@ public class MainActivity extends AppCompatActivity {
     private void changeFragment(Fragment fragment){
         fragmentManager.beginTransaction().hide(active).show(fragment).commit();
         active = fragment;
+
     }
+    /*
+    binding = ActivityMainBinding.inflate(getLayoutInflater());
+        setContentView(binding.getRoot());
+
+        binding.bottomNavigationView.setOnItemSelectedListener(item -> {
+            switch(item.getItemId()){
+                case R.id.eat_options:
+                    replaceFragment(new IngredientPicker());
+                    break;
+                case R.id.groceries:
+                    break;
+                case R.id.chat:
+                    break;
+                case R.id.setting:
+                    replaceFragment(new SettingsFragment());
+                    break;
+            }
+            return true;
+        });
+    }
+
+    private void replaceFragment(Fragment fragment) {
+        FragmentManager fragmentManager = getSupportFragmentManager();
+        FragmentTransaction fragmentTransaction = fragmentManager.beginTransaction();
+        fragmentTransaction.replace(R.id.fragmentScreen, fragment);
+        fragmentTransaction.commit();
+    */
 }

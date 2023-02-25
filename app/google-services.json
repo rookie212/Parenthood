@@ -1,0 +1,39 @@
+{
+  "project_info": {
+    "project_number": "1063497546659",
+    "project_id": "parenthood-bbc20",
+    "storage_bucket": "parenthood-bbc20.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:1063497546659:android:89c1ce65f719ee1a3e7816",
+        "android_client_info": {
+          "package_name": "com.humber.parenthood"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "1063497546659-qot39vdlrtcegv6v6m0g7h1idlugc7da.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyBi42NWI1-d127xPyf8N03PbvKChai_PeM"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "1063497546659-3o6ir0g1mg2bpg330q62j2kvepulj8rm.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

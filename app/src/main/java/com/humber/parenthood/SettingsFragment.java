@@ -4,7 +4,7 @@ import android.os.Bundle;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
-import android.widget.Button;
+import android.widget.LinearLayout;
 
 import androidx.annotation.NonNull;
 import androidx.annotation.Nullable;
@@ -25,7 +25,7 @@ public class SettingsFragment extends Fragment {
     @Override
     public void onViewCreated(@NonNull View view, @Nullable Bundle savedInstanceState) {
         super.onViewCreated(view, savedInstanceState);
-        Button signOutButton = requireView().findViewById(R.id.btn_sign_out);
-        signOutButton.setOnClickListener(v -> AuthUI.getInstance().signOut(requireActivity()).addOnCompleteListener(task -> requireActivity().finish()));
+        LinearLayout signOutLayout = requireView().findViewById(R.id.ll_sign_out);
+        signOutLayout.setOnClickListener(v -> AuthUI.getInstance().signOut(requireActivity()).addOnCompleteListener(task -> requireActivity().finish()));
     }
 }

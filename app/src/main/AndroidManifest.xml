@@ -10,17 +10,15 @@
         android:label="@string/app_name"
         android:supportsRtl="true"
         android:theme="@style/Theme.Parenthood"
-
         tools:targetApi="31" >
 
         <activity
             android:name=".FirebaseSignInActivity"
-            android:label="Firebase Sign In"
             android:exported="true" >
-            <!--<intent-filter>
+            <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
                 <category android:name="android.intent.category.LAUNCHER" />
-            </intent-filter> -->
+            </intent-filter>
         </activity>
 
         <activity
@@ -28,10 +26,10 @@
             android:label="Home"
             android:exported="true"
             android:windowSoftInputMode="adjustPan">
-        <intent-filter>
-                <action android:name="android.intent.action.MAIN" />
-                <category android:name="android.intent.category.LAUNCHER" />
-            </intent-filter>
+<!--            <intent-filter>-->
+<!--                <action android:name="android.intent.action.MAIN" />-->
+<!--                <category android:name="android.intent.category.LAUNCHER" />-->
+<!--            </intent-filter>-->
         </activity>
     </application>
 

@@ -1,17 +1,18 @@
 <resources>
     <string name="app_name">Parenthood</string>
+
     <!-- TODO: Remove or change this placeholder text -->
     <string name="hello_blank_fragment">Hello blank fragment</string>
+
     <string name="title_activity_nav">nav</string>
     <string name="title_home">Home</string>
     <string name="title_dashboard">Dashboard</string>
     <string name="title_notifications">Notifications</string>
-
-
     <string name="title_eat_options">Eat in or out</string>
     <string name="title_eat_in">Eat in</string>
     <string name="title_eat_out">Eat out</string>
     <string name="title_groceries">Groceries</string>
     <string name="title_chat">Chat</string>
     <string name="title_settings">Settings</string>
+    <string name="eat_in_out">Eat in/out</string>
 </resources>

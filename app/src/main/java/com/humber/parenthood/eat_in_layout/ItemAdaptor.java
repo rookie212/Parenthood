@@ -42,7 +42,7 @@ public class ItemAdaptor extends RecyclerView.Adapter <ItemAdaptor.ViewHolder>{
         return modelArrayList.size();
     }
 
-    public class ViewHolder extends RecyclerView.ViewHolder {
+    public static class ViewHolder extends RecyclerView.ViewHolder {
         TextView name;
         public ViewHolder(@NonNull View itemView) {
             super(itemView);

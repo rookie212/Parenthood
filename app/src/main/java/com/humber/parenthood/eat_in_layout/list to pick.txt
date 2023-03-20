@@ -1,0 +1,17 @@
+Based off everything there seems to be a static list of items based of some general items, then form there they can add more items if they feel like it
+So looking into this,
+
+
+
+what items can be added to the pick items:
+the RV will then be updated as the list adds items so need to make a secondary contianer for it
+
+4 main sectors:
+
+veg/fruit
+
+grain
+
+meat
+
+dairy

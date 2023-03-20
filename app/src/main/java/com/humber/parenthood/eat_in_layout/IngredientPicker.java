@@ -10,15 +10,18 @@ import androidx.annotation.Nullable;
 import androidx.fragment.app.Fragment;
 import androidx.recyclerview.widget.GridLayoutManager;
 import androidx.recyclerview.widget.RecyclerView;
+import com.humber.parenthood.eat_in_layout.ItemOnClickListener;
 
 import com.humber.parenthood.R;
 
 import java.util.ArrayList;
 
 public class IngredientPicker extends Fragment {
-    private ItemAdaptor adapter;
-    private ArrayList<ItemModel> modelArrayList;
-    private RecyclerView recyclerView;
+    ItemAdaptor adapter;
+    ArrayList<ItemModel> modelArrayList;
+    RecyclerView recyclerView;
+    RecyclerView selectedRecyclerView;
+    ItemAdaptor adaptor;
 
     @Override
     public View onCreateView(LayoutInflater inflater, ViewGroup container, Bundle savedInstanceState) {
@@ -31,6 +34,7 @@ public class IngredientPicker extends Fragment {
         modelArrayList = new ArrayList<>();
 
         recyclerView = view.findViewById(R.id.itemsRV);
+        selectedRecyclerView = view.findViewById(R.id.selectedItemsRV);
 
         modelArrayList.add(new ItemModel("potato"));
         modelArrayList.add(new ItemModel("apple"));
@@ -52,5 +56,12 @@ public class IngredientPicker extends Fragment {
         recyclerView.setLayoutManager(new GridLayoutManager (view.getContext(), 4));
         adapter = new ItemAdaptor(modelArrayList, view.getContext());
         recyclerView.setAdapter(adapter);
+    }
+
+    private void updateRecycler(ArrayList<ItemModel> items) {
+//        recyclerView.setHasFixedSize(true);
+//        recyclerView.setLayoutManager(new GridLayoutManager(view.getContext(), 4));
+//        adaptor = new ItemAdaptor(IngredientPicker.this, items, ItemOnClickListener, mainDAO);
+//        recyclerView.setAdapter(adaptor);
     }
 }

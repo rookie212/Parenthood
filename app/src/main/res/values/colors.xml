@@ -13,8 +13,9 @@
     <color name="secondary">#FF6200EE</color>
     <color name="secondaryDark">#3B0D7C</color>
     <color name="secondaryLight">#436200EE</color>
+    <color name="default_selected">#0094C6</color>
+    <color name="favourite_yellow">#FFFF00</color>
     <color name="line">#C0C0C0</color>
     <color name="b1">#EFEFEF</color>
     <color name="b2">#3454D1</color>
-    "3454D1"
 </resources>

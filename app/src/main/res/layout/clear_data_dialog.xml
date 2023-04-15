@@ -1,0 +1,83 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:background="@drawable/sheet_light"
+    android:layout_width="match_parent"
+    android:layout_height="354dp"
+    android:orientation="vertical"
+    android:paddingBottom="36dp"
+    >
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:gravity="center_horizontal"
+        android:orientation="vertical">
+
+        <androidx.cardview.widget.CardView
+            android:layout_width="38dp"
+            android:layout_height="3dp"
+            android:layout_marginTop="8dp"
+            app:cardBackgroundColor="#E0E0E0" />
+
+        <TextView
+            android:id="@+id/remove_from"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="24dp"
+            android:layout_marginBottom="20dp"
+            android:gravity="center_horizontal|center_vertical"
+            android:lineSpacingExtra="0sp"
+            android:textSize="23sp"
+            android:textColor="@color/black"
+            android:text="Clear data?"
+
+            />
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="48dp"
+            android:layout_marginRight="16dp"
+            android:layout_marginLeft="16dp"
+            android:orientation="horizontal">
+            <RelativeLayout
+                android:id="@+id/cancel"
+                android:layout_width="0dp"
+                android:layout_weight="1"
+                android:layout_height="58dp"
+                android:background="@drawable/type_button_disabled"
+                >
+
+                <TextView
+                    android:id="@+id/button"
+                    android:layout_width="match_parent"
+                    android:layout_height="22dp"
+                    android:layout_centerInParent="true"
+                    android:gravity="center_horizontal|center_vertical"
+                    android:lineSpacingExtra="3sp"
+                    android:text="Cancel"
+                    android:textAppearance="@style/button_text_disabled" />
+            </RelativeLayout>
+            <RelativeLayout
+                android:layout_width="0dp"
+                android:layout_marginLeft="16dp"
+                android:id="@+id/remove"
+                android:layout_height="58dp"
+                android:layout_weight="1"
+                style="@style/primary_button"
+                >
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="22dp"
+                    android:text="Clear"
+                    android:layout_centerInParent="true"
+                    android:textAppearance="@style/button"
+                    android:lineSpacingExtra="3sp"
+                    android:gravity="center_horizontal|center_vertical"
+                    />
+            </RelativeLayout>
+
+        </LinearLayout>
+    </LinearLayout>
+</FrameLayout>

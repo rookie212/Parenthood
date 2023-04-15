@@ -25,6 +25,7 @@
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:layout_marginTop="10dp"
+            android:id="@+id/eat"
             android:background="@drawable/type_button"
             android:clickable="true"
             android:padding="8dp">
@@ -53,6 +54,7 @@
 
         <RelativeLayout
             android:layout_width="match_parent"
+            android:id="@+id/cook"
             android:layout_height="wrap_content"
             android:layout_marginTop="10dp"
             android:background="@drawable/type_button"

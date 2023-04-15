@@ -12,15 +12,14 @@ import com.humber.parenthood.databinding.FragmentSettingsBinding;
 
 public class SettingsFragment extends Fragment {
 
-    FragmentSettingsBinding binding;
+    FragmentSettingsBinding a;
 
     @Override
     public View onCreateView(@NonNull LayoutInflater inflater, ViewGroup container,
                              Bundle savedInstanceState) {
-        if (binding == null) binding = FragmentSettingsBinding.inflate(inflater, container, false);
+        if (a == null) a = FragmentSettingsBinding.inflate(inflater, container, false);
 
 
-
-        return binding.getRoot();
+        return a.getRoot();
     }
 }

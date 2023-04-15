@@ -89,7 +89,7 @@ public class IngredientPicker extends Fragment {
             if (selectedItems.size() != 0) {
                 prompt = "I have " + selectedItems + " in my fridge. Can you provide me a recipe with these items?";
             }
-            OpenAiService service = new OpenAiService("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");
+            OpenAiService service = new OpenAiService("");
 
             CompletionRequest request = CompletionRequest.builder()
                     .prompt(prompt)

@@ -13,6 +13,8 @@ import com.humber.parenthood.Fragments.GroceryListFragment;
 import com.humber.parenthood.databinding.ActivityMainBinding;
 import com.humber.parenthood.eat_in_layout.IngredientPicker;
 
+import java.util.Objects;
+
 public class MainActivity extends AppCompatActivity {
     ActivityMainBinding binding;
     FragmentManager fragmentManager;
@@ -36,14 +38,14 @@ public class MainActivity extends AppCompatActivity {
 
         fragmentManager = getSupportFragmentManager();
         FragmentTransaction fragmentTransaction = fragmentManager.beginTransaction();
+        fragmentTransaction.add(binding.fragmentScreen.getId(), ingredientPicker);
         fragmentTransaction.add(binding.fragmentScreen.getId(), settingsFragment).hide(settingsFragment);
         fragmentTransaction.add(binding.fragmentScreen.getId(), groceryFragment).hide(groceryFragment);
         fragmentTransaction.add(binding.fragmentScreen.getId(), eatInOutFragment).hide(eatInOutFragment);
-        fragmentTransaction.add(binding.fragmentScreen.getId(), ingredientPicker).hide(ingredientPicker);
-        fragmentTransaction.add(binding.fragmentScreen.getId(), chatFragment);
+        fragmentTransaction.add(binding.fragmentScreen.getId(), chatFragment).hide(chatFragment);
         fragmentTransaction.commitNow();
-        active = chatFragment;
-        getSupportActionBar().setTitle("Chat");
+        active = ingredientPicker;
+        Objects.requireNonNull(getSupportActionBar()).setTitle("Ingredient Picker");
 
         binding.bottomNavigationView.setOnItemSelectedListener(item -> {
             int itemId = item.getItemId();
@@ -62,7 +64,7 @@ public class MainActivity extends AppCompatActivity {
                 getSupportActionBar().setTitle("Eat In/Out");
             } else if (itemId == R.id.eat_options) {
                 changeFragment(ingredientPicker);
-                getSupportActionBar().setTitle("Eat In/Out");
+                getSupportActionBar().setTitle("Ingredient Picker");
             }
             return true;
         });

@@ -11,6 +11,7 @@ import androidx.fragment.app.FragmentTransaction;
 import com.humber.parenthood.Fragments.ChatFragment;
 import com.humber.parenthood.Fragments.EatInOutFragment;
 import com.humber.parenthood.Fragments.GroceryListFragment;
+import com.humber.parenthood.Fragments.SettingsFragment;
 import com.humber.parenthood.databinding.ActivityMainBinding;
 import com.humber.parenthood.eat_in_layout.IngredientPicker;
 
@@ -25,6 +26,7 @@ public class MainActivity extends AppCompatActivity {
     Fragment active;
     Fragment eatInOutFragment;
     Fragment ingredientPicker;
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -72,7 +74,7 @@ public class MainActivity extends AppCompatActivity {
         });
     }
 
-    private void changeFragment(Fragment fragment){
+    private void changeFragment(Fragment fragment) {
         fragmentManager.beginTransaction().hide(active).show(fragment).commit();
         active = fragment;
     }

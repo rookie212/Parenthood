@@ -1,0 +1,64 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+
+    <style name="primary_button">
+        <item name="android:background">@drawable/type_button</item>
+        <item name="android:clickable">true</item>
+    </style>
+    <style name="button">
+
+        <item name="android:textSize">
+            16sp
+        </item>
+
+        <item name="android:letterSpacing">
+            0.01
+        </item>
+
+        <item name="android:textColor">
+            #FFFFFF
+        </item>
+
+        <item name="android:shadowColor">
+            #40019B83
+        </item>
+
+        <item name="android:shadowDx">
+            4
+        </item>
+
+        <item name="android:shadowDy">
+            8
+        </item>
+
+        <item name="android:shadowRadius">
+            24
+        </item>
+
+    </style>
+
+    <style name="button_text_disabled">
+
+        <item name="android:textSize">
+            16sp
+        </item>
+
+        <item name="android:letterSpacing">
+            0.01
+        </item>
+
+        <item name="android:textColor">
+            @color/black
+        </item>
+
+    </style>
+    <style name="TransParentBottomSheet" parent="Theme.Design.Light.BottomSheetDialog">
+        <item name="bottomSheetStyle">@style/CustomBottomSheetStyle</item>
+    </style>
+
+    <style name="CustomBottomSheetStyle" parent="Widget.Design.BottomSheet.Modal">
+        <item name="android:background">@android:color/transparent</item>
+    </style>
+
+</resources>

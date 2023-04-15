@@ -6,4 +6,20 @@
     android:layout_height="match_parent"
     tools:context=".CookAtHomeActivity">
 
+<!--    <ScrollView-->
+<!--        android:layout_width="match_parent"-->
+<!--        android:layout_height="match_parent"-->
+<!--        -->
+<!--        >-->
+<!--        -->
+<!--    </ScrollView>-->
+
+    <TextView
+        android:id="@+id/tv_cook_at_home_activity"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_margin="33dp"
+        android:scrollbars = "vertical"/>
+
+
 </androidx.constraintlayout.widget.ConstraintLayout>

@@ -1,25 +1,28 @@
 package com.humber.parenthood.eat_in_layout;
 
 import android.os.Bundle;
+import android.os.StrictMode;
 import android.util.Log;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 import android.widget.Button;
-import androidx.appcompat.widget.SearchView;
-
 
 import androidx.annotation.NonNull;
 import androidx.annotation.Nullable;
+import androidx.appcompat.widget.SearchView;
 import androidx.fragment.app.Fragment;
 import androidx.recyclerview.widget.GridLayoutManager;
-import androidx.recyclerview.widget.LinearLayoutManager;
 import androidx.recyclerview.widget.RecyclerView;
 
+
+//import com.humber.parenthood.OpenAIAsyncTask;
 import com.humber.parenthood.R;
+import com.theokanning.openai.completion.CompletionRequest;
+import com.theokanning.openai.service.OpenAiService;
 
 import java.util.ArrayList;
-import java.util.List;
+
 
 public class IngredientPicker extends Fragment {
     private ItemAdaptor adapter;
@@ -73,7 +76,34 @@ public class IngredientPicker extends Fragment {
                     selectedItems.add(model.getName());
                 }
             }
-            Log.d("@Harman", "Can you provide me a recipe with these items: " + selectedItems);
+//            StrictMode.ThreadPolicy policy = new StrictMode.ThreadPolicy.Builder()
+//                    .permitAll().build();
+//            StrictMode.setThreadPolicy(policy);
+//            OpenAiService service = new OpenAiService("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");
+//            CompletionRequest completionRequest = CompletionRequest.builder()
+//                    .prompt("Somebody once told me the world is gonna roll me")
+//                    .model("ada")
+//                    .echo(true)
+//                    .build();
+//            service.createCompletion(completionRequest).getChoices().forEach(choice -> {
+//                System.out.println(choice.getText());
+//            });
+
+//            OpenAiService service = new OpenAiService("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");
+//            CompletionRequest request = CompletionRequest.builder()
+//                    .prompt("what is temperature in toronto?")
+//                    .model("text-davinci-003")
+//                    .echo(true)
+//                    .build();
+//            new OpenAIAsyncTask(service, request, new Callback<String>() {
+//
+//                @Override
+//                public void onResult(String result) {
+//                    System.out.println(result);
+//                }
+//            }).execute();
+
+//            Log.d("@Harman", "Can you provide me a recipe with these items: " + selectedItems);
         });
 
         // Set the listener on the adapter

@@ -1,5 +1,6 @@
 package com.humber.parenthood;
 
+import android.content.Intent;
 import android.os.Bundle;
 
 import androidx.appcompat.app.AppCompatActivity;
@@ -50,9 +51,10 @@ public class MainActivity extends AppCompatActivity {
         binding.bottomNavigationView.setOnItemSelectedListener(item -> {
             int itemId = item.getItemId();
             if (itemId == R.id.chat) {
-
-                changeFragment(chatFragment);
-                getSupportActionBar().setTitle("Chat");
+                Intent intent = new Intent();
+                intent.setAction("com.humber.parenthood.chat");
+                intent.addCategory("android.intent.category.DEFAULT");
+                startActivity(intent);
             } else if (itemId == R.id.groceries) {
                 changeFragment(groceryFragment);
                 getSupportActionBar().setTitle("Groceries List");
@@ -68,32 +70,10 @@ public class MainActivity extends AppCompatActivity {
             }
             return true;
         });
-//        binding.bottomNavigationView.setOnItemSelectedListener(item -> {
-//            switch(item.getItemId()){
-//                case R.id.eat_options:
-//                    replaceFragment(new IngredientPicker());
-//                    break;
-//                case R.id.groceries:
-//                    break;
-//                case R.id.chat:
-//                    break;
-//                case R.id.settings:
-//                    replaceFragment(new SettingsFragment());
-//                    break;
-//            }
-//            return true;
-//        });
     }
 
     private void changeFragment(Fragment fragment){
         fragmentManager.beginTransaction().hide(active).show(fragment).commit();
         active = fragment;
     }
-
-//    private void replaceFragment(Fragment fragment) {
-//        FragmentManager fragmentManager = getSupportFragmentManager();
-//        FragmentTransaction fragmentTransaction = fragmentManager.beginTransaction();
-//        fragmentTransaction.replace(R.id.fragmentScreen, fragment);
-//        fragmentTransaction.commit();
-//    }
 }

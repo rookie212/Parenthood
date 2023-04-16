@@ -6,20 +6,22 @@ import java.util.Collections;
 public class KitchenItems {
     public static ArrayList<String> getItems() {
         ArrayList<String> items = new ArrayList<>();
+        items.add("Apples");
         items.add("Alcohol");
         items.add("Bagels");
+        items.add("Bananas");
         items.add("Barbecue sauce");
         items.add("Bottled water");
         items.add("Bouillon cubes");
         items.add("Bread");
         items.add("Brownies");
         items.add("Butter");
-        items.add("Cakes (e.g., chocolate cake, vanilla cake)");
+        items.add("Cakes");
         items.add("Candy");
         items.add("Canned beans");
-        items.add("Canned fish (e.g., tuna, salmon, sardines)");
+        items.add("Canned fish");
         items.add("Canned fruits");
-        items.add("Canned meat (e.g., tuna, chicken)");
+        items.add("Canned meat");
         items.add("Canned pasta");
         items.add("Canned soup");
         items.add("Canned tomatoes");
@@ -38,6 +40,7 @@ public class KitchenItems {
         items.add("Crackers");
         items.add("Cream cheese");
         items.add("Croissants");
+        items.add("Cucumbers");
         items.add("Cupcakes");
         items.add("Dinner rolls");
         items.add("Donuts");
@@ -82,6 +85,7 @@ public class KitchenItems {
         items.add("Tea");
         items.add("Tomato paste");
         items.add("Tomato sauce");
+        items.add("Tomatoes");
         items.add("Tortillas");
         items.add("Vinegar");
         items.add("Whipped cream");

@@ -71,6 +71,7 @@ public class IngredientPicker extends Fragment {
 
                 // Update the adapter with the filtered list
                 adapter.updateList(filteredList);
+                adapter.notifyDataSetChanged();
 
                 return true;
             }

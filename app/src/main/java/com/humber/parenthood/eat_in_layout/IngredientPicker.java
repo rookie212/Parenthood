@@ -1,31 +1,43 @@
 package com.humber.parenthood.eat_in_layout;
 
+import android.content.Intent;
 import android.os.Bundle;
+import android.os.StrictMode;
 import android.util.Log;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 import android.widget.Button;
-import androidx.appcompat.widget.SearchView;
-
+import android.widget.Toast;
 
 import androidx.annotation.NonNull;
 import androidx.annotation.Nullable;
+import androidx.appcompat.widget.SearchView;
 import androidx.fragment.app.Fragment;
 import androidx.recyclerview.widget.GridLayoutManager;
-import androidx.recyclerview.widget.LinearLayoutManager;
 import androidx.recyclerview.widget.RecyclerView;
+import androidx.viewbinding.ViewBinding;
 
+import com.humber.parenthood.CookAtHomeActivity;
+import com.humber.parenthood.OpenAIAsyncTask;
 import com.humber.parenthood.R;
+import com.theokanning.openai.completion.CompletionChoice;
+import com.theokanning.openai.completion.CompletionRequest;
+import com.theokanning.openai.completion.CompletionResult;
+import com.theokanning.openai.service.OpenAiService;
 
 import java.util.ArrayList;
 import java.util.List;
+
+import retrofit2.*;
+
 
 public class IngredientPicker extends Fragment {
     private ItemAdaptor adapter;
     private ArrayList<ItemModel> modelArrayList;
 
     private final ArrayList<String> fridgeItems = KitchenItems.getItems();
+
 
     @Override
     public View onCreateView(LayoutInflater inflater, ViewGroup container, Bundle savedInstanceState) {
@@ -59,6 +71,7 @@ public class IngredientPicker extends Fragment {
 
                 // Update the adapter with the filtered list
                 adapter.updateList(filteredList);
+                adapter.notifyDataSetChanged();
 
                 return true;
             }
@@ -73,7 +86,35 @@ public class IngredientPicker extends Fragment {
                     selectedItems.add(model.getName());
                 }
             }
-            Log.d("@Harman", "Can you provide me a recipe with these items: " + selectedItems);
+            String prompt = "make a random recipe";
+            if (selectedItems.size() != 0) {
+                prompt = "I have " + selectedItems + " in my fridge. Can you provide me a recipe with these items?";
+            }
+            OpenAiService service = new OpenAiService("");
+
+            CompletionRequest request = CompletionRequest.builder()
+                    .prompt(prompt)
+                    .model("text-davinci-003")
+                    .temperature(1.0)
+                    .maxTokens(4000)
+                    .echo(true)
+                    .build();
+            new OpenAIAsyncTask(service, request, new Callback<CompletionResult>() {
+                @Override
+                public void onResponse(@NonNull Call<CompletionResult> call, @NonNull Response<CompletionResult> response) {
+                    assert response.body() != null;
+//                    Toast.makeText(getContext(), response.body().getChoices().get(0).getText(), Toast.LENGTH_LONG).show();
+                    Intent intent = new Intent(requireActivity(), CookAtHomeActivity.class);
+                    intent.putExtra("recipe", response.body().getChoices().get(0).getText());
+                    startActivity(intent);
+                }
+                @Override
+                public void onFailure(@NonNull Call<CompletionResult> call, @NonNull Throwable t) {
+                    t.printStackTrace();
+                }
+            }).execute();
+
+//            Log.d("@Harman", "Can you provide me a recipe with these items: " + selectedItems);
         });
 
         // Set the listener on the adapter

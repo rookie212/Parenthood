@@ -2,15 +2,12 @@ package com.humber.parenthood;
 
 import android.content.Context;
 import android.content.SharedPreferences;
-import android.preference.PreferenceManager;
 
 public class SharedPreference {
-    private Context context;
+    private final SharedPreferences preferences;
     SharedPreferences.Editor editor;
-    private SharedPreferences preferences;
 
     public SharedPreference(Context context2) {
-        context = context2;
         preferences = context2.getSharedPreferences(context2.getPackageName(), 0);
         editor = preferences.edit();
     }

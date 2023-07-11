@@ -2,8 +2,8 @@
 <ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     android:layout_width="match_parent"
-    android:layout_height="match_parent"
-    >
+    android:layout_height="match_parent">
+
     <LinearLayout
         android:layout_width="match_parent"
         android:layout_height="match_parent"
@@ -14,6 +14,7 @@
             android:layout_height="wrap_content"
             android:layout_marginTop="24dp"
             android:clickable="true"
+            android:focusable="true"
             android:foreground="?android:attr/selectableItemBackground"
             android:gravity="center_vertical"
             android:orientation="horizontal"
@@ -63,6 +64,7 @@
             android:layout_height="wrap_content"
             android:layout_marginTop="14dp"
             android:clickable="true"
+            android:focusable="true"
             android:foreground="?android:attr/selectableItemBackground"
             android:gravity="center_vertical"
             android:orientation="horizontal"
@@ -112,6 +114,7 @@
             android:layout_height="wrap_content"
             android:layout_marginTop="14dp"
             android:clickable="true"
+            android:focusable="true"
             android:foreground="?android:attr/selectableItemBackground"
             android:gravity="center_vertical"
             android:orientation="horizontal"
@@ -158,11 +161,12 @@
         </LinearLayout>
 
         <LinearLayout
+            android:id="@+id/privacy"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:layout_marginTop="14dp"
-            android:id="@+id/privacy"
             android:clickable="true"
+            android:focusable="true"
             android:foreground="?android:attr/selectableItemBackground"
             android:gravity="center_vertical"
             android:orientation="horizontal"
@@ -208,11 +212,12 @@
         </LinearLayout>
 
         <LinearLayout
+            android:id="@+id/terms"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:id="@+id/terms"
             android:layout_marginTop="14dp"
             android:clickable="true"
+            android:focusable="true"
             android:foreground="?android:attr/selectableItemBackground"
             android:gravity="center_vertical"
             android:orientation="horizontal"
@@ -262,6 +267,7 @@
             android:layout_height="wrap_content"
             android:layout_marginTop="14dp"
             android:clickable="true"
+            android:focusable="true"
             android:foreground="?android:attr/selectableItemBackground"
             android:gravity="center_vertical"
             android:orientation="horizontal"
@@ -307,11 +313,12 @@
         </LinearLayout>
 
         <LinearLayout
+            android:id="@+id/faq"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:layout_marginTop="14dp"
             android:clickable="true"
-            android:id="@+id/faq"
+            android:focusable="true"
             android:foreground="?android:attr/selectableItemBackground"
             android:gravity="center_vertical"
             android:orientation="horizontal"
@@ -367,11 +374,12 @@
             android:paddingBottom="4dp" />
 
         <LinearLayout
+            android:id="@+id/clear_data"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:layout_marginTop="14dp"
-            android:id="@+id/clear_data"
             android:clickable="true"
+            android:focusable="true"
             android:foreground="?android:attr/selectableItemBackground"
             android:gravity="center_vertical"
             android:orientation="horizontal"
@@ -415,6 +423,7 @@
             android:layout_height="wrap_content"
             android:layout_marginTop="14dp"
             android:clickable="true"
+            android:focusable="true"
             android:foreground="?android:attr/selectableItemBackground"
             android:gravity="center_vertical"
             android:orientation="horizontal"

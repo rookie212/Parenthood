@@ -6,6 +6,7 @@
         <item name="android:background">@drawable/type_button</item>
         <item name="android:clickable">true</item>
     </style>
+
     <style name="button">
 
         <item name="android:textSize">
@@ -53,6 +54,7 @@
         </item>
 
     </style>
+
     <style name="TransParentBottomSheet" parent="Theme.Design.Light.BottomSheetDialog">
         <item name="bottomSheetStyle">@style/CustomBottomSheetStyle</item>
     </style>

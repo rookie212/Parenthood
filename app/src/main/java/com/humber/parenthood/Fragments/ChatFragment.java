@@ -20,7 +20,6 @@ public class ChatFragment extends Fragment {
         if (binding == null) binding = FragmentChatBinding.inflate(inflater, container, false);
 
 
-
         return binding.getRoot();
     }
 }

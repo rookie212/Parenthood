@@ -17,8 +17,8 @@ public class GroceryListFragment extends Fragment {
     @Override
     public View onCreateView(@NonNull LayoutInflater inflater, ViewGroup container,
                              Bundle savedInstanceState) {
-        if (binding == null) binding = FragmentGroceryListBinding.inflate(inflater, container, false);
-
+        if (binding == null)
+            binding = FragmentGroceryListBinding.inflate(inflater, container, false);
 
 
         return binding.getRoot();

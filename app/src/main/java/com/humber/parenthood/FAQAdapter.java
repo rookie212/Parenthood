@@ -12,7 +12,7 @@ import java.util.List;
 
 public class FAQAdapter extends RecyclerView.Adapter<FAQAdapter.ViewHolder> {
 
-    private List<QAModel> qaList;
+    private final List<QAModel> qaList;
 
     public FAQAdapter(List<QAModel> qaList) {
         this.qaList = qaList;
@@ -38,9 +38,9 @@ public class FAQAdapter extends RecyclerView.Adapter<FAQAdapter.ViewHolder> {
         return qaList.size();
     }
 
-    public class ViewHolder extends RecyclerView.ViewHolder {
+    public static class ViewHolder extends RecyclerView.ViewHolder {
 
-        FaqListItemBinding binding;
+        final FaqListItemBinding binding;
 
         public ViewHolder(@NonNull FaqListItemBinding binding) {
             super(binding.getRoot());

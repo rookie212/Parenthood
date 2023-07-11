@@ -1,12 +1,11 @@
 <?xml version="1.0" encoding="utf-8"?>
 <ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
-    android:background="@drawable/sheet_light"
     android:layout_width="match_parent"
     android:layout_height="wrap_content"
+    android:background="@drawable/sheet_light"
     android:orientation="vertical"
-    android:paddingBottom="36dp"
-    >
+    android:paddingBottom="36dp">
 
     <LinearLayout
         android:layout_width="match_parent"
@@ -25,14 +24,14 @@
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:layout_marginTop="24dp"
-            android:textStyle="bold"
             android:layout_marginBottom="20dp"
             android:gravity="center_horizontal|center_vertical"
             android:lineSpacingExtra="0sp"
-            android:textSize="23sp"
-            android:textColor="@color/black"
             android:text="Clear data?"
-            />
+            android:textColor="@color/black"
+            android:textSize="23sp"
+            android:textStyle="bold" />
+
         <TextView
             android:id="@+id/message"
             android:layout_width="match_parent"
@@ -41,28 +40,27 @@
             android:layout_marginBottom="6dp"
             android:gravity="center_horizontal|center_vertical"
             android:lineSpacingExtra="0sp"
-            android:textSize="14sp"
-            android:textColor="@color/black"
             android:text="Clear data?"
-            />
+            android:textColor="@color/black"
+            android:textSize="14sp" />
 
         <LinearLayout
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
+            android:layout_marginLeft="16dp"
             android:layout_marginTop="8dp"
             android:layout_marginRight="16dp"
-            android:layout_marginLeft="16dp"
+            android:baselineAligned="false"
             android:orientation="horizontal">
+
             <RelativeLayout
                 android:id="@+id/cancel"
                 android:layout_width="0dp"
-                android:layout_weight="1"
                 android:layout_height="58dp"
-                android:background="@drawable/type_button_disabled"
-                >
+                android:layout_weight="1"
+                android:background="@drawable/type_button_disabled">
 
                 <TextView
-                    android:id="@+id/button"
                     android:layout_width="match_parent"
                     android:layout_height="22dp"
                     android:layout_centerInParent="true"
@@ -71,14 +69,14 @@
                     android:text="Cancel"
                     android:textAppearance="@style/button_text_disabled" />
             </RelativeLayout>
+
             <RelativeLayout
-                android:layout_width="0dp"
-                android:layout_marginLeft="16dp"
                 android:id="@+id/remove"
-                android:layout_height="58dp"
-                android:layout_weight="1"
                 style="@style/primary_button"
-                >
+                android:layout_width="0dp"
+                android:layout_height="58dp"
+                android:layout_marginLeft="16dp"
+                android:layout_weight="1">
 
                 <TextView
                     android:layout_width="match_parent"

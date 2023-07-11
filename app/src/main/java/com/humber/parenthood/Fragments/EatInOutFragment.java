@@ -11,7 +11,6 @@ import androidx.fragment.app.Fragment;
 
 import com.humber.parenthood.CookAtHomeActivity;
 import com.humber.parenthood.EatOutActivity;
-import com.humber.parenthood.FaqActivity;
 import com.humber.parenthood.databinding.FragmentEatInOutBinding;
 
 public class EatInOutFragment extends Fragment {
@@ -23,12 +22,8 @@ public class EatInOutFragment extends Fragment {
                              Bundle savedInstanceState) {
         if (binding == null) binding = FragmentEatInOutBinding.inflate(inflater, container, false);
 
-        binding.eat.setOnClickListener(v->{
-            startActivity(new Intent(requireActivity(), EatOutActivity.class));
-        });
-        binding.cook.setOnClickListener(v->{
-            startActivity(new Intent(requireActivity(), CookAtHomeActivity.class));
-        });
+        binding.eat.setOnClickListener(v -> startActivity(new Intent(requireActivity(), EatOutActivity.class)));
+        binding.cook.setOnClickListener(v -> startActivity(new Intent(requireActivity(), CookAtHomeActivity.class)));
 
         return binding.getRoot();
     }

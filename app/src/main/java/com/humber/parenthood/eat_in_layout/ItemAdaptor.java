@@ -14,19 +14,21 @@ import com.humber.parenthood.R;
 
 import java.util.ArrayList;
 
-public class ItemAdaptor extends RecyclerView.Adapter <ItemAdaptor.ViewHolder> {
+public class ItemAdaptor extends RecyclerView.Adapter<ItemAdaptor.ViewHolder> {
+    private final Context context;
     private ArrayList<ItemModel> modelArrayList;
     private ItemClickListener itemClickListener;
-    private final Context context;
+
     public ItemAdaptor(ArrayList<ItemModel> modelArrayList, Context context) {
         this.modelArrayList = modelArrayList;
         this.context = context;
     }
+
     @NonNull
     @Override
     public ItemAdaptor.ViewHolder onCreateViewHolder(@NonNull ViewGroup parent, int viewType) {
         // view instance
-        View view = LayoutInflater.from(parent.getContext()).inflate(R.layout.item, parent,false);
+        View view = LayoutInflater.from(parent.getContext()).inflate(R.layout.item, parent, false);
         return new ViewHolder(view);
     }
 
@@ -41,13 +43,13 @@ public class ItemAdaptor extends RecyclerView.Adapter <ItemAdaptor.ViewHolder> {
         setSelectedColor(model, selectedCV);
 
         holder.itemView.setOnClickListener(v -> {
-            if(itemClickListener != null) {
+            if (itemClickListener != null) {
                 itemClickListener.onClick(model);
             }
         });
 
         holder.itemView.setOnLongClickListener(v -> {
-            if(itemClickListener != null) {
+            if (itemClickListener != null) {
                 itemClickListener.onLongClick(model);
             }
             return true;
@@ -55,19 +57,17 @@ public class ItemAdaptor extends RecyclerView.Adapter <ItemAdaptor.ViewHolder> {
     }
 
     private void setFavouriteColor(ItemModel model, CardView favCard) {
-        if(model.favourite) {
+        if (model.favourite) {
             favCard.setCardBackgroundColor(context.getResources().getColor(R.color.favourite_yellow));
-        }
-        else {
+        } else {
             favCard.setCardBackgroundColor(context.getResources().getColor(R.color.default_selected));
         }
     }
 
     private void setSelectedColor(ItemModel model, CardView selCard) {
-        if(model.selected) {
+        if (model.selected) {
             selCard.setCardBackgroundColor(context.getResources().getColor(R.color.black));
-        }
-        else {
+        } else {
             selCard.setCardBackgroundColor(context.getResources().getColor(R.color.white));
         }
     }
@@ -81,16 +81,17 @@ public class ItemAdaptor extends RecyclerView.Adapter <ItemAdaptor.ViewHolder> {
         this.itemClickListener = itemClickListener;
     }
 
+    public void updateList(ArrayList<ItemModel> filteredList) {
+        this.modelArrayList = filteredList;
+    }
+
     public static class ViewHolder extends RecyclerView.ViewHolder {
-        TextView name;
+        final TextView name;
+
         public ViewHolder(@NonNull View itemView) {
             super(itemView);
             name = itemView.findViewById(R.id.item_name);
         }
-    }
-
-    public void updateList(ArrayList<ItemModel> filteredList) {
-        this.modelArrayList = filteredList;
     }
 
 }

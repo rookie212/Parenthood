@@ -1,6 +1,6 @@
 package com.humber.parenthood.eat_in_layout;
+
 import java.util.ArrayList;
-import java.util.Collection;
 import java.util.Collections;
 
 public class KitchenItems {

@@ -8,6 +8,7 @@ import com.humber.parenthood.databinding.ActivityFaqBinding;
 
 import java.util.ArrayList;
 import java.util.List;
+import java.util.Objects;
 
 public class FaqActivity extends AppCompatActivity {
 
@@ -18,7 +19,7 @@ public class FaqActivity extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         a = ActivityFaqBinding.inflate(getLayoutInflater());
         setContentView(a.getRoot());
-        getSupportActionBar().setTitle("FAQ");
+        Objects.requireNonNull(getSupportActionBar()).setTitle("FAQ");
         // Create a list of QAModel items
         List<QAModel> qaList = new ArrayList<>();
         qaList.add(new QAModel("What is your return policy?", "Our return policy allows for returns up to 30 days after purchase."));

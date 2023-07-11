@@ -22,12 +22,13 @@
             android:textSize="20sp" />
 
         <RelativeLayout
+            android:id="@+id/eat"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:layout_marginTop="10dp"
-            android:id="@+id/eat"
             android:background="@drawable/type_button"
             android:clickable="true"
+            android:focusable="true"
             android:padding="8dp">
 
             <TextView
@@ -44,21 +45,22 @@
         <TextView
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
+            android:layout_marginTop="30dp"
             android:gravity="center_vertical"
             android:lineSpacingExtra="0sp"
             android:text="Cook at home?"
-            android:layout_marginTop="30dp"
             android:textColor="@color/black"
             android:textFontWeight="700"
             android:textSize="20sp" />
 
         <RelativeLayout
-            android:layout_width="match_parent"
             android:id="@+id/cook"
+            android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:layout_marginTop="10dp"
             android:background="@drawable/type_button"
             android:clickable="true"
+            android:focusable="true"
             android:padding="8dp">
 
             <TextView

@@ -5,7 +5,7 @@
     <item
         android:id="@+id/eat_options"
         android:icon="@drawable/ic_dashboard_black_24dp"
-        android:title="@string/title_eat_options"/>
+        android:title="@string/title_eat_options" />
     <item
         android:id="@+id/groceries"
         android:icon="@drawable/round_format_list_bulleted_24"
@@ -23,26 +23,23 @@
         android:icon="@drawable/ic_setting_bold"
         android:title="@string/title_settings" />
 
-<!--
-    <item
-        android:id="@+id/user_profile"
-        android:icon="@drawable/ic_dashboard_black_24dp"
-        android:title="@string/title_dashboard"/>
--->
+    <!--
+        <item
+            android:id="@+id/user_profile"
+            android:icon="@drawable/ic_dashboard_black_24dp"
+            android:title="@string/title_dashboard"/>
+    -->
 
 
+    <!--    <item
+            android:id="@+id/eat_in"
+            android:icon="@drawable/ic_dashboard_black_24dp"
+            android:title="@string/title_eat_in"/>
 
-<!--    <item
-        android:id="@+id/eat_in"
-        android:icon="@drawable/ic_dashboard_black_24dp"
-        android:title="@string/title_eat_in"/>
-
-    <item
-        android:id="@+id/eat_out"
-        android:icon="@drawable/ic_dashboard_black_24dp"
-        android:title="@string/title_eat_out"/>-->
-
-
+        <item
+            android:id="@+id/eat_out"
+            android:icon="@drawable/ic_dashboard_black_24dp"
+            android:title="@string/title_eat_out"/>-->
 
 
 </menu>

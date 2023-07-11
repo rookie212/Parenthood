@@ -1,19 +1,22 @@
 package com.humber.parenthood;
 
-import androidx.appcompat.app.AppCompatActivity;
-
 import android.os.Bundle;
+
+import androidx.appcompat.app.AppCompatActivity;
 
 import com.humber.parenthood.databinding.ActivityEatOutBinding;
 
+import java.util.Objects;
+
 public class EatOutActivity extends AppCompatActivity {
     ActivityEatOutBinding a;
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         a = ActivityEatOutBinding.inflate(getLayoutInflater());
         setContentView(a.getRoot());
-        getSupportActionBar().setTitle("Eat out");
+        Objects.requireNonNull(getSupportActionBar()).setTitle("Eat out");
 
     }
 }

@@ -7,21 +7,21 @@
         android:id="@+id/question_text_view"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:text="What is your question?"
-        android:padding="6dp"
+        android:layout_marginBottom="8dp"
         android:background="#F3F3F3"
+        android:padding="6dp"
+        android:text="What is your question?"
         android:textColor="@color/black"
         android:textSize="19sp"
-        android:layout_marginBottom="8dp"
         android:textStyle="bold" />
 
     <TextView
         android:id="@+id/answer_text_view"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:textColor="@color/black"
         android:padding="6dp"
-        android:textSize="14sp"
-        android:text="This is the answer to your question." />
+        android:text="This is the answer to your question."
+        android:textColor="@color/black"
+        android:textSize="14sp" />
 
 </LinearLayout>

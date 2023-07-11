@@ -31,9 +31,7 @@ public class ClearData extends BottomSheetDialogFragment {
         if (binding == null) {
             binding = ClearDataDialogBinding.inflate(inflater, container, false);
         }
-        binding.cancel.setOnClickListener(v -> {
-            dismiss();
-        });
+        binding.cancel.setOnClickListener(v -> dismiss());
 
         binding.remove.setOnClickListener(v -> {
             Toast.makeText(requireContext(), "Cleared", Toast.LENGTH_SHORT).show();

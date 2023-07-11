@@ -1,10 +1,10 @@
 package com.humber.parenthood;
 
-import androidx.appcompat.app.AppCompatActivity;
-
 import android.os.Bundle;
 import android.text.method.ScrollingMovementMethod;
 import android.widget.TextView;
+
+import androidx.appcompat.app.AppCompatActivity;
 
 import com.humber.parenthood.databinding.ActivityCookAtHomeBinding;
 
@@ -13,6 +13,7 @@ import java.util.Objects;
 public class CookAtHomeActivity extends AppCompatActivity {
 
     ActivityCookAtHomeBinding a;
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);

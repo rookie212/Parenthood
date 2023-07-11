@@ -12,16 +12,15 @@ import androidx.annotation.Nullable;
 import com.google.android.material.bottomsheet.BottomSheetDialogFragment;
 import com.humber.parenthood.R;
 import com.humber.parenthood.databinding.BottomSheetBinding;
-import com.humber.parenthood.databinding.ClearDataDialogBinding;
 
 
 public class BottomSheetDialog extends BottomSheetDialogFragment {
 
+    private final String title;
+    private final String message;
     private BottomSheetBinding binding;
 
-    private String title, message;
-
-    public BottomSheetDialog(String title, String message){
+    public BottomSheetDialog(String title, String message) {
         this.title = title;
         this.message = message;
     }
@@ -38,9 +37,7 @@ public class BottomSheetDialog extends BottomSheetDialogFragment {
         if (binding == null) {
             binding = BottomSheetBinding.inflate(inflater, container, false);
         }
-        binding.cancel.setOnClickListener(v -> {
-            dismiss();
-        });
+        binding.cancel.setOnClickListener(v -> dismiss());
 
         binding.remove.setOnClickListener(v -> {
             Toast.makeText(requireContext(), "Accepted", Toast.LENGTH_SHORT).show();

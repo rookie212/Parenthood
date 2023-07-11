@@ -20,8 +20,8 @@ import com.humber.parenthood.databinding.FragmentSettingsBinding;
 
 public class SettingsFragment extends Fragment {
 
-    private FragmentSettingsBinding a;
     SharedPreference sharedPreference;
+    private FragmentSettingsBinding a;
 
     @Override
     public View onCreateView(@NonNull LayoutInflater inflater, ViewGroup container,
@@ -44,16 +44,13 @@ public class SettingsFragment extends Fragment {
         }
 
 
-        a.darkMode.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View view) {
-                if (a.darkMode.isChecked()) {
-                    AppCompatDelegate.setDefaultNightMode(AppCompatDelegate.MODE_NIGHT_YES);
-                } else {
-                    AppCompatDelegate.setDefaultNightMode(AppCompatDelegate.MODE_NIGHT_NO);
-                }
-                sharedPreference.addBoolean("dark_mode", a.darkMode.isChecked());
+        a.darkMode.setOnClickListener(view1 -> {
+            if (a.darkMode.isChecked()) {
+                AppCompatDelegate.setDefaultNightMode(AppCompatDelegate.MODE_NIGHT_YES);
+            } else {
+                AppCompatDelegate.setDefaultNightMode(AppCompatDelegate.MODE_NIGHT_NO);
             }
+            sharedPreference.addBoolean("dark_mode", a.darkMode.isChecked());
         });
 
         a.clearData.setOnClickListener(v -> {
@@ -108,9 +105,7 @@ public class SettingsFragment extends Fragment {
             );
             dialog.show(getChildFragmentManager(), "");
         });
-        a.faq.setOnClickListener(v -> {
-            startActivity(new Intent(requireActivity(), FaqActivity.class));
-        });
+        a.faq.setOnClickListener(v -> startActivity(new Intent(requireActivity(), FaqActivity.class)));
 
 
     }

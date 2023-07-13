@@ -6,6 +6,7 @@ import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 import android.widget.Button;
+import android.widget.Toast;
 
 import androidx.annotation.NonNull;
 import androidx.annotation.Nullable;
@@ -32,6 +33,7 @@ public class IngredientPicker extends Fragment {
     private final ArrayList<String> fridgeItems = KitchenItems.getItems();
     private ItemAdaptor adapter;
     private ArrayList<ItemModel> modelArrayList;
+    private final String OPENAI_SERVICE_TOKEN = "";
     private final ItemClickListener itemClickListener = new ItemClickListener() {
         @Override
         public void onClick(ItemModel items) {
@@ -97,6 +99,10 @@ public class IngredientPicker extends Fragment {
 
 
         printSelectionButton.setOnClickListener(v -> {
+            if (OPENAI_SERVICE_TOKEN.equals("")) {
+                Toast.makeText(getContext(), "Please add your OpenAI service token in IngredientPicker.java", Toast.LENGTH_LONG).show();
+                return;
+            }
             ArrayList<String> selectedItems = new ArrayList<>();
             for (ItemModel model : modelArrayList) {
                 if (model.selected) {
@@ -108,10 +114,10 @@ public class IngredientPicker extends Fragment {
             if (selectedItems.size() != 0) {
                 prompt = "I have " + selectedItems + " in my fridge. Can you provide me a recipe with these items?";
             }
-            OpenAiService openAiService = new OpenAiService("");
+            OpenAiService openAiService = new OpenAiService(OPENAI_SERVICE_TOKEN);
             CompletionRequest completionRequest = CompletionRequest.builder()
                     .prompt(prompt)
-                    .model("text-davinci-003")
+                    .model("gpt-3.5-turbo")
                     .temperature(1.0)
                     .maxTokens(4000)
                     .echo(true)

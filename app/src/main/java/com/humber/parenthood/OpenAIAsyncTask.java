@@ -26,6 +26,7 @@ public class OpenAIAsyncTask extends AsyncTask<Void, Void, CompletionResult> {
         try {
             return service.createCompletion(request);
         } catch (Exception e) {
+            e.printStackTrace();
             return null;
         }
     }
@@ -34,6 +35,8 @@ public class OpenAIAsyncTask extends AsyncTask<Void, Void, CompletionResult> {
     protected void onPostExecute(CompletionResult result) {
         if (result != null) {
             callback.onResponse(null, Response.success(result));
+        } else {
+            callback.onFailure(null, new Exception("Failed to get response"));
         }
     }
 }

@@ -31,9 +31,9 @@ import retrofit2.Response;
 
 public class IngredientPicker extends Fragment {
     private final ArrayList<String> fridgeItems = KitchenItems.getItems();
+    private final String OPENAI_SERVICE_TOKEN = "";
     private ItemAdaptor adapter;
     private ArrayList<ItemModel> modelArrayList;
-    private final String OPENAI_SERVICE_TOKEN = "";
     private final ItemClickListener itemClickListener = new ItemClickListener() {
         @Override
         public void onClick(ItemModel items) {

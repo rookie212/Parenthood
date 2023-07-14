@@ -1,7 +1,7 @@
 package com.humber.parenthood.eat_in_layout;
 
 public class ItemModel {
-    String name;
+    final String name;
     boolean favourite = false;
     boolean selected = false;
 
